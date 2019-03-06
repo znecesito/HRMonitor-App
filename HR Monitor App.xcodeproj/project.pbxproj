@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342264252230416600C92F37 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342264242230416600C92F37 /* UIButtonExtension.swift */; };
 		34FBD035222DEC1F00CF0117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD034222DEC1F00CF0117 /* AppDelegate.swift */; };
-		34FBD037222DEC1F00CF0117 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD036222DEC1F00CF0117 /* ViewController.swift */; };
+		34FBD037222DEC1F00CF0117 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD036222DEC1F00CF0117 /* MainViewController.swift */; };
 		34FBD03A222DEC1F00CF0117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FBD038222DEC1F00CF0117 /* Main.storyboard */; };
 		34FBD03D222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD03B222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld */; };
 		34FBD03F222DEC2000CF0117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34FBD03E222DEC2000CF0117 /* Assets.xcassets */; };
 		34FBD042222DEC2000CF0117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FBD040222DEC2000CF0117 /* LaunchScreen.storyboard */; };
+		34FBD04A222DEDD600CF0117 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD049222DEDD600CF0117 /* CustomNavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		342264242230416600C92F37 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		34FBD031222DEC1F00CF0117 /* HR Monitor App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HR Monitor App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FBD034222DEC1F00CF0117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34FBD036222DEC1F00CF0117 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34FBD036222DEC1F00CF0117 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34FBD039222DEC1F00CF0117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34FBD03C222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HR_Monitor_App.xcdatamodel; sourceTree = "<group>"; };
 		34FBD03E222DEC2000CF0117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34FBD041222DEC2000CF0117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34FBD043222DEC2000CF0117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34FBD049222DEDD600CF0117 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				34FBD034222DEC1F00CF0117 /* AppDelegate.swift */,
-				34FBD036222DEC1F00CF0117 /* ViewController.swift */,
+				34FBD036222DEC1F00CF0117 /* MainViewController.swift */,
+				34FBD049222DEDD600CF0117 /* CustomNavController.swift */,
+				342264242230416600C92F37 /* UIButtonExtension.swift */,
 				34FBD038222DEC1F00CF0117 /* Main.storyboard */,
 				34FBD03E222DEC2000CF0117 /* Assets.xcassets */,
 				34FBD040222DEC2000CF0117 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34FBD037222DEC1F00CF0117 /* ViewController.swift in Sources */,
+				34FBD04A222DEDD600CF0117 /* CustomNavController.swift in Sources */,
+				342264252230416600C92F37 /* UIButtonExtension.swift in Sources */,
+				34FBD037222DEC1F00CF0117 /* MainViewController.swift in Sources */,
 				34FBD03D222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld in Sources */,
 				34FBD035222DEC1F00CF0117 /* AppDelegate.swift in Sources */,
 			);
