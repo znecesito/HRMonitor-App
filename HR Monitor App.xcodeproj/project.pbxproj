@@ -41,6 +41,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342264262230584B00C92F37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34FBD036222DEC1F00CF0117 /* MainViewController.swift */,
+				34FBD049222DEDD600CF0117 /* CustomNavController.swift */,
+				342264242230416600C92F37 /* UIButtonExtension.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34226427223058AF00C92F37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34FBD040222DEC2000CF0117 /* LaunchScreen.storyboard */,
+				34FBD038222DEC1F00CF0117 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34226428223058C200C92F37 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				34FBD03B222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		34226429223058E800C92F37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34FBD03E222DEC2000CF0117 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		34FBD028222DEC1F00CF0117 = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				34FBD034222DEC1F00CF0117 /* AppDelegate.swift */,
-				34FBD036222DEC1F00CF0117 /* MainViewController.swift */,
-				34FBD049222DEDD600CF0117 /* CustomNavController.swift */,
-				342264242230416600C92F37 /* UIButtonExtension.swift */,
-				34FBD038222DEC1F00CF0117 /* Main.storyboard */,
-				34FBD03E222DEC2000CF0117 /* Assets.xcassets */,
-				34FBD040222DEC2000CF0117 /* LaunchScreen.storyboard */,
+				34226428223058C200C92F37 /* Data Model */,
+				34226427223058AF00C92F37 /* View */,
+				342264262230584B00C92F37 /* Controller */,
+				34226429223058E800C92F37 /* Supporting Files */,
 				34FBD043222DEC2000CF0117 /* Info.plist */,
-				34FBD03B222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld */,
 			);
 			path = "HR Monitor App";
 			sourceTree = "<group>";

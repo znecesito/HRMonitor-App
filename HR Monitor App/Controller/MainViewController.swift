@@ -6,7 +6,9 @@
 //  Copyright © 2019 Zack Necesito. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import CoreData
 import CoreBluetooth
 let heartRateServiceCBUUID = CBUUID(string: "0x180D")
 let heartRateMeasurementCharacteristicCBUUID = CBUUID(string: "2A37")
@@ -18,19 +20,43 @@ class MainViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
     var centralManager: CBCentralManager!
     var heartRatePeripheral: CBPeripheral!
+    
+    var heartRateList = [HeartRate]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         customizeButton()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+
     }
 
     func onHeartRateReceived(_ heartRate: Int) {
+        //UI
         BPMLabel.text = String(heartRate)
         print("BPM: \(heartRate)")
+        
+        //persisting data
+        let newHeartRate = HeartRate(context: context)
+        newHeartRate.heartRate = Int64(heartRate)
+        
+        heartRateList.append(newHeartRate)
+        
+        saveItems()
+    }
+    
+    func saveItems(){
+        do {
+            try context.save()
+        } catch  {
+            print("Error: \(error)")
+        }
     }
     
     func customizeButton(){
