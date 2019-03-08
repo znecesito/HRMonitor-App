@@ -18,7 +18,6 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var BPMLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
     var centralManager: CBCentralManager!
@@ -32,7 +31,6 @@ class MainViewController: UIViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
-        customizeButton()
         centralManager = CBCentralManager(delegate: self, queue: nil)
 
     }
@@ -59,19 +57,8 @@ class MainViewController: UIViewController {
         }
     }
     
-    func customizeButton(){
-        startButton.layer.cornerRadius = 10
-        stopButton.layer.cornerRadius = 10
-    }
-    
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        sender.pulsate()
-        startButton.isEnabled = false
-    }
-    
     @IBAction func stopButtonPressed(_ sender: UIButton) {
-        sender.pulsate()
-        startButton.isEnabled = true
+        dismiss(animated: true, completion: nil)
     }
     
 }
