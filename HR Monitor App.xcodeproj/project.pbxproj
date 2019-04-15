@@ -10,6 +10,7 @@
 		342264252230416600C92F37 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342264242230416600C92F37 /* UIButtonExtension.swift */; };
 		34E7807A2232EA3F00C7BAC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E780792232EA3F00C7BAC9 /* RootViewController.swift */; };
 		34E7807C2232EA7100C7BAC9 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7807B2232EA7100C7BAC9 /* ListTableViewController.swift */; };
+		34F64A182256AA4300A9C697 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F64A172256AA4300A9C697 /* CategoryViewController.swift */; };
 		34FBD035222DEC1F00CF0117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD034222DEC1F00CF0117 /* AppDelegate.swift */; };
 		34FBD037222DEC1F00CF0117 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBD036222DEC1F00CF0117 /* MainViewController.swift */; };
 		34FBD03A222DEC1F00CF0117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34FBD038222DEC1F00CF0117 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		342264242230416600C92F37 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		34E780792232EA3F00C7BAC9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		34E7807B2232EA7100C7BAC9 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		34F64A172256AA4300A9C697 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		34FBD031222DEC1F00CF0117 /* HR Monitor App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HR Monitor App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FBD034222DEC1F00CF0117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34FBD036222DEC1F00CF0117 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				34E780792232EA3F00C7BAC9 /* RootViewController.swift */,
 				34FBD036222DEC1F00CF0117 /* MainViewController.swift */,
+				34F64A172256AA4300A9C697 /* CategoryViewController.swift */,
 				34E7807B2232EA7100C7BAC9 /* ListTableViewController.swift */,
 				34FBD049222DEDD600CF0117 /* CustomNavController.swift */,
 				342264242230416600C92F37 /* UIButtonExtension.swift */,
@@ -186,6 +189,7 @@
 				342264252230416600C92F37 /* UIButtonExtension.swift in Sources */,
 				34E7807A2232EA3F00C7BAC9 /* RootViewController.swift in Sources */,
 				34FBD037222DEC1F00CF0117 /* MainViewController.swift in Sources */,
+				34F64A182256AA4300A9C697 /* CategoryViewController.swift in Sources */,
 				34FBD03D222DEC1F00CF0117 /* HR_Monitor_App.xcdatamodeld in Sources */,
 				34FBD035222DEC1F00CF0117 /* AppDelegate.swift in Sources */,
 				34E7807C2232EA7100C7BAC9 /* ListTableViewController.swift in Sources */,

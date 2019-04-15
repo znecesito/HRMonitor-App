@@ -12,13 +12,15 @@ import CoreData
 class ListTableViewController: UITableViewController {
 
     var heartRateList = [HeartRate]()
+    var selectedCategory : Category? {
+        didSet{
+            loadItems()
+        }
+    }
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadItems()
-        
     }
 
     // MARK: - Table view data source
@@ -40,17 +42,23 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true) 
     }
     
     func loadItems(){
+        
         let request : NSFetchRequest<HeartRate> = HeartRate.fetchRequest()
+
+        let predicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+        
+        request.predicate = predicate
+
         do {
             heartRateList = try context.fetch(request)
         } catch  {
             print("Error fetching data: \(error)")
         }
-        
+            
     }
 
 

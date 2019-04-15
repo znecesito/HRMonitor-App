@@ -22,17 +22,34 @@ class MainViewController: UIViewController {
     
     var centralManager: CBCentralManager!
     var heartRatePeripheral: CBPeripheral!
+    var category = Category()
     
     var heartRateList = [HeartRate]()
+    var categoryList = [Category]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadItems()
+        verifyCategory()
+        
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
 
+    }
+    
+    func verifyCategory() {
+        
+        category = Category(context: context)
+        
+        category.name = "Entry \(categoryList.count + 1)"
+        
+        categoryList.append(category)
+        
+        saveItems()
+        
     }
 
     func onHeartRateReceived(_ heartRate: Int) {
@@ -43,6 +60,7 @@ class MainViewController: UIViewController {
         //persisting data
         let newHeartRate = HeartRate(context: context)
         newHeartRate.heartRate = Int64(heartRate)
+        newHeartRate.parentCategory = category
         
         heartRateList.append(newHeartRate)
         
@@ -55,6 +73,16 @@ class MainViewController: UIViewController {
         } catch  {
             print("Error: \(error)")
         }
+    }
+
+    func loadItems(){
+        let request : NSFetchRequest<Category> = Category.fetchRequest()
+        do {
+            categoryList = try context.fetch(request)
+        } catch  {
+            print("Error fetching data: \(error)")
+        }
+
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="heartRate" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HeartRate" inverseName="parentCategory" inverseEntity="HeartRate" syncable="YES"/>
+    </entity>
     <entity name="HeartRate" representedClassName=".HeartRate" syncable="YES" codeGenerationType="class">
         <attribute name="heartRate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="heartRate" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HeartRate" positionX="-45" positionY="0" width="128" height="60"/>
+        <element name="Category" positionX="6335.890625" positionY="56.4921875" width="128" height="73"/>
+        <element name="HeartRate" positionX="6580.625" positionY="21.26953125" width="128" height="73"/>
     </elements>
 </model>

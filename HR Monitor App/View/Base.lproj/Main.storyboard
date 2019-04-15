@@ -113,7 +113,7 @@
                                     <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FbB-xr-7u9" kind="show" id="JxG-ph-A6f"/>
+                                    <segue destination="OHH-FU-wOV" kind="show" id="WyD-eh-sN9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="107-DY-cM0">
@@ -154,6 +154,37 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="120.08995502248877"/>
         </scene>
+        <!--Category View Controller-->
+        <scene sceneID="KsD-ge-LVq">
+            <objects>
+                <tableViewController id="OHH-FU-wOV" customClass="CategoryViewController" customModule="HR_Monitor_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xNy-vs-iV5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="ZP2-Ob-I8g">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZP2-Ob-I8g" id="bew-ma-47J">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OHH-FU-wOV" id="TUP-Mh-PZT"/>
+                            <outlet property="delegate" destination="OHH-FU-wOV" id="GDs-Xj-Ofb"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="FbB-xr-7u9" kind="show" identifier="goToHRList" id="CEo-Gq-cDa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eM1-YZ-3OH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="-233"/>
+        </scene>
         <!--List Table View Controller-->
         <scene sceneID="zFr-1O-cJa">
             <objects>
@@ -180,12 +211,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEP-pa-XpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034.4000000000001" y="-209.14542728635683"/>
+            <point key="canvasLocation" x="3746" y="-232"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="nvU-9k-ijQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7t-tz-PeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nbj-zo-jmL" customClass="CustomNavController" customModule="HR_Monitor_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G8w-Sj-Etd">
@@ -197,6 +227,7 @@
                         <segue destination="RNr-aP-L8T" kind="relationship" relationship="rootViewController" id="7NE-t2-NFc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7t-tz-PeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="120.08995502248877"/>
         </scene>
